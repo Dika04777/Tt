@@ -45,13 +45,13 @@ def autoketik(s):
 def countdown(time_sec):
 	try:
 		while time_sec:
-			mins, secs = divmod(time_sec,60)
+			mins, secs = divmod(time_sec,1)
 			timeformat = '\033[1;97m[\033[1;93m•\033[1;97m] Silakan Menunggu Dalam Waktu \033[1;92m{:02d}:{:02d}'.format(mins,secs)
 			print(timeformat,end='\r')
 			time.sleep(1)
 			time_sec -= 1
 		print (f"{W}[{Y}•{W}] Mulai Menyepam Ulang....           ")
-		time.sleep(5)
+		time.sleep(0)
 	except KeyboardInterrupt:
                 print (f"{W}Program Terminated [{R}!{W}]")
                 sys.exit()
